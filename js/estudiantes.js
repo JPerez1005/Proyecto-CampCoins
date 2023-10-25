@@ -182,8 +182,16 @@ function modificarPersonas()
         const persona = listaDePersonas[i];
         if (persona.id==estudianteId) {
             encontrado=true;
-            persona.actualizarPersona(estudianteNombre,estudianteTelefono,estudianteCorreo,estudianteGrupo);
+            persona.nombre=estudianteNombre;
+            persona.telefono=estudianteTelefono;
+            persona.correo=estudianteCorreo;
+            persona.grupo=estudianteGrupo;
             alert('estudiante modificado');
+            d.getElementById('estudianteId').value='';
+            d.getElementById('estudianteNombre').value='';
+            d.getElementById('estudianteTelefono').value='';
+            d.getElementById('estudianteCorreo').value='';
+            d.getElementById('estudianteGrupo').value='';
         }
     }
     if (encontrado==false) {
@@ -206,6 +214,34 @@ function agregarConcepto()
     Concepto.crearConcepto(idConcepto,concepto,total);
     d.getElementById('concepto').value='';
     d.getElementById('puntos').value='';
+}
+
+function modificarConcepto()
+{
+    let total,
+        nuevoconcepto=d.getElementById('concepto').value,
+        nuevospuntos=d.getElementById('puntos').value,
+        eleccion=d.getElementById('eleccion_puntos').value,
+        idConcepto=d.getElementById('idConcepto').value;
+    if (eleccion==='quitar') {
+        total=(-puntos);
+    }else{
+        total=puntos;
+    }
+    for (let i = 0; i < listaDeConceptos.length; i++) {
+        const concepto = listaDeConceptos[i];
+        if (concepto.id==idConcepto) {
+            encontrado=true;
+            concepto.concepto=nuevoconcepto;
+            concepto.puntos=nuevospuntos;
+            alert('concepto modificado');
+            d.getElementById('concepto').value='';
+            d.getElementById('puntos').value='';
+        }
+    }
+    if (encontrado==false) {
+        alert('no se encontró');
+    }
 }
 
 function mostrarPersonas()
@@ -288,4 +324,4 @@ function mostrarConceptos()
     }); */
 }
 
-export {agregarPersonas,agregarConcepto,mostrarPersonas,mostrarConceptos,modificarPersonas}
+export {agregarPersonas,agregarConcepto,mostrarPersonas,mostrarConceptos,modificarPersonas,modificarConcepto}

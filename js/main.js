@@ -1,5 +1,5 @@
 import { d,agregar_estudiante_toggle,agregar_campcoins_toggle,ver_estudiantes_toggle,ver_conceptos_toggle } from "./funcionalidades.js";
-import { agregarPersonas,agregarConcepto,mostrarPersonas,mostrarConceptos,modificarPersonas } from "./estudiantes.js";
+import { agregarPersonas,agregarConcepto,mostrarPersonas,mostrarConceptos,modificarPersonas,modificarConcepto} from "./estudiantes.js";
 
 /* funcionalidades */
 
@@ -30,10 +30,13 @@ modificar_estudiante=d.getElementById('modificar_estudiante');
 
 crear_estudiante.addEventListener('click',agregarPersonas);
 mostrar_personas.addEventListener('click',mostrarPersonas);
+modificar_estudiante.addEventListener('click',modificarPersonas);
 
 /* Conceptos */
 let agregar_concepto=d.getElementById('agregar_concepto'),
-mostrar_conceptos=d.getElementById('buscar_concepto');
+mostrar_conceptos=d.getElementById('buscar_concepto'),
+modificar_concepto=d.getElementById('modificar_concepto');
 
 agregar_concepto.addEventListener('click',agregarConcepto);
 mostrar_conceptos.addEventListener('click',mostrarConceptos);
+modificar_concepto.addEventListener('click',modificarConcepto);
