@@ -222,7 +222,8 @@ function modificarConcepto()
         nuevoconcepto=d.getElementById('concepto').value,
         nuevospuntos=d.getElementById('puntos').value,
         eleccion=d.getElementById('eleccion_puntos').value,
-        idConcepto=d.getElementById('idConcepto').value;
+        idConcepto=d.getElementById('idConcepto').value,
+        encontrado=false;
     if (eleccion==='quitar') {
         total=(-puntos);
     }else{
