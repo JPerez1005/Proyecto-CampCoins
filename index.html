@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de CampCoins</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="card">
+        <img src="img/estudiante.jpg" alt="">
+        <a class= "btn" id="agregar_estudiante_btn">Agregar Estudiante</a>
+        <section id="agregar_estudiante">
+            <div class="content">
+                <h1>Agregar Estudiante</h1>
+                <input type="text" placeholder="Digite Id..." id="estudianteId">
+                <input type="text" placeholder="Digite nombre..." id="estudianteNombre">
+                <input type="numbre" placeholder="Telefono..." id="estudianteTelefono">
+                <input type="text" placeholder="Digite Correo..." id="estudianteCorreo">
+                <input type="text" placeholder="Digite Grupo..." id="estudianteGrupo">
+                <div class="btns">
+
+                    <button id="crear_estudiante">Agregar</button>
+                    <button id="modificar_estudiante">Modificar</button>
+                </div>
+            </div>
+            <a class="close" id="close_estudiante"><img src="img/cancel.png"></a>
+        </section>
+    </div>
+    <div class="card">
+        <img src="img/curso.jpg" alt="">
+        <a class="btn" id="abrir_campcoins">Agregar CampCoins</a>
+        <section id="agregar_campcoins">
+            <div class="content">
+                <h1>Agregar CampCoins</h1>
+                <input type="number" placeholder="Digite id..." id="idConcepto">
+                <input type="text" placeholder="Digite concepto..." id="concepto">
+                <input type="number" placeholder="Digite puntos..." id="puntos">
+                <select name="" id="eleccion_puntos">
+                    <option value="quitar">quitar</option>
+                    <option value="asignar">asignar</option>
+                </select>
+                <button id="agregar_concepto">Agregar concepto</button>
+            </div>
+            <a class="close" id="cerrar_campcoins"><img src="img/cancel.png"></a>
+        </section>
+    </div>
+    <div class="card">
+        <img src="img/horario.jpg" alt="" style="position: relative;">
+        <a class="btn" id="gestion_estudiantes">Gestion Estudiantes</a>
+        <a class="btn" id="gestion_conceptos" style="transform: translateY(100px);">Gestion Conceptos</a>
+        <section id="ver_estudiantes">
+            <div class="content">
+                <h1>Ver Estudiantes</h1>
+                <br><br>
+                <input type="number" placeholder="Digite la cedula" id="buscarId">
+                <button id="buscar_estudiante">Buscar Estudiante</button>
+                <div id="lista_estudiantes">
+
+                </div>
+            </div>
+            <a class="close" id="no_ver_estudiantes"><img src="img/cancel.png"></a><!-- cerrar aqui -->
+            
+        </section>
+        <section id="ver_conceptos">
+            <div class="content">
+                <h1>Ver Conceptos</h1>
+                <br><br>
+                <input type="number" placeholder="Digite el id del concepto" id="buscar_id_concepto">
+                <button id="buscar_concepto">Buscar Concepto</button>
+                <div id="lista_conceptos">
+                    
+                </div>
+            </div>
+            <a class="close" id="no_ver_conceptos"><img src="img/cancel.png"></a>
+        </section>
+    </div>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>
